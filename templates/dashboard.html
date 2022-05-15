@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3 style="font-weight: bold; color: cadetblue;" >Dashboard</h3>
+<hr>
+
+
+
+<label style="font-weight: bold;">Add Article</label>
+<br>
+<form method="post" align="Center"> 
+
+    {{ aForm.csrf_token }}
+    {{ aForm.nameA.label }}{{ aForm.nameA(size=20) }} <br> <br>
+    {{ aForm.year.label }} {{ aForm.year(size=20) }} <br> <br>
+    <button class="btn btn-outline-success" type="submit">Add</button>
+</form>
+<hr>
+<label style="font-weight: bold;">Add Researcher</label>
+<br>
+<form method="post" align="Center"> 
+
+    {{ rForm.csrf_token }}
+    {{ rForm.nameR.label }}{{ rForm.nameR(size=20) }} <br> <br>
+    {{ rForm.surname.label }} {{ rForm.surname(size=20) }} <br> <br>
+    <button class="btn btn-outline-success" type="submit">Add</button>
+</form>
+<hr>
+<label style="font-weight: bold;">Add Type</label>
+<br>
+<form method="post" align="Center"> 
+
+    {{ tForm.csrf_token }}
+    {{ tForm.nameT.label }}{{ tForm.nameT(size=20) }} <br> <br>
+    {{ tForm.publicationPlace.label }} {{ tForm.publicationPlace(size=20) }} <br> <br>
+    <button class="btn btn-outline-success" type="submit">Add</button>
+</form>
+<hr>
+
+
+
+{% endblock body %}

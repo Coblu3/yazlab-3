@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3>Login</h3>
+<hr>
+
+
+
+<form method="post"> 
+
+    {{ form.csrf_token }}
+    {{ form.email.label }}{{ form.email(size=20) }} <br> <br>
+    {{ form.password.label }} {{ form.password(size=20) }} <br> <br>
+    <button class="btn btn-outline-success" type="submit">Login</button>
+</form>
+
+
+
+
+
+{% endblock body %}

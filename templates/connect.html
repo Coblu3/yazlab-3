@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3 style="font-weight: bold; color: cadetblue;" >Dashboard</h3>
+<hr>
+{% if field %}
+    {{field}} asdd
+{% endif %}
+<label style="font-weight: bold;">Select Researcher</label>
+<br>
+<form  method="post">
+    {{rSelect.csrf_token}}
+    {{rSelect.researcher()}}
+    <hr>
+    {{rSelect.article()}}
+    <hr>
+    {{rSelect.type()}}
+    <hr>
+   
+    <input type="submit">
+</form>
+
+
+
+
+
+{% endblock body %}

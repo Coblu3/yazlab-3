@@ -1,0 +1,20 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">Yazlab-3</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="/">Home<span class="sr-only"></span></a>
+        {% if session["logged_in"] %}
+        <a class="nav-link active" href="/dashboard">Dashboard<span class="sr-only"></span></a>
+        <a class="nav-link active" href="/connect">Connect Datas<span class="sr-only"></span></a>   
+        <a class="nav-link active" href="/logout">Logout<span class="sr-only"></span></a>
+        {% else %}
+        <a class="nav-link active" href="/login">Login<span class="sr-only"></span></a>
+        {% endif %}
+        
+        
+      </div>
+    </div>
+  </nav>
